@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\AdminConfig;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 
@@ -36,9 +37,8 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         $this->mapApiRoutes();
-
+        $this->mapExtensionsRoutes();
         $this->mapWebRoutes();
-
         //
     }
 
@@ -51,9 +51,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes()
     {
-        Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+        Route::middleware(['web', 'localization', 'currency'])
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
     }
 
     /**
@@ -66,8 +66,32 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
+    }
+
+    protected function mapExtensionsRoutes()
+    {
+        Route::middleware(['web', 'localization', 'currency'])
+            ->group(function () {
+                if (!is_file(base_path() . '/public/install.php')) {
+                    try {
+                        $arrExts = AdminConfig::where('value', 1)
+                            ->whereIn('type', ['Modules', 'Extensions'])
+                            ->get()
+                            ->toArray();
+                        foreach ($arrExts as $arrExt) {
+                            $filename = base_path() . '/app/' . $arrExt['type'] . '/' . $arrExt['code'] . '/Route/' . $arrExt['key'] . '.php';
+                            if (file_exists($filename)) {
+                                require_once $filename;
+                            }
+                        }
+                    } catch (\Exception $e) {
+
+                    }
+                }
+
+            });
     }
 }

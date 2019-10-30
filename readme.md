@@ -1,74 +1,162 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+    <img src="https://s-cart.org/logo.png" width="150">
 </p>
+<p align="center">Free Laravel e-commerce for business<br>
+    <code><b>composer create-project lanhktc/s-cart</b></code></p>
+<p align="center">
+    <a href="https://www.paypal.me/LeLanh" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" data-origin="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="PayPal Me"></a>
+</p>
+<p align="center">
+ <a href="https://s-cart.org">Home page</a> | <a href="https://demo.s-cart.org">Demo</a> | <a href="https://demo.s-cart.org/sc_admin">Demo admin</a> | <a href="https://s-cart.org/installation.html">Installation</a> | <a href="https://s-cart.org/pro.html">S-Cart Pro</a> | <a href="https://s-cart.org/video-guide.html">Video Guide</a>
+</p>
+<p align="center">
+<a href="https://packagist.org/packages/lanhktc/s-cart"><img src="https://poser.pugx.org/lanhktc/s-cart/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/lanhktc/s-cart"><img src="https://poser.pugx.org/lanhktc/s-cart/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/lanhktc/s-cart"><img src="https://poser.pugx.org/lanhktc/s-cart/license.svg" alt="License"></a>
+</p>
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/home-1.jpg"></p>
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/home-2.jpg"></p>
+Product detail
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/detail-1.jpg"></p>
+Product bundle
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/detail-bundle.jpg"></p>
+Product group
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/detail-group.jpg"></p>
+Cart
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/cart.jpg"></p>
+Admin homepage
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/admin-home.jpg"></p>
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/admin-home-1.jpg"></p>
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/admin-home-2.jpg"></p>
+Order list
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/order-list.jpg"></p>
+Order detail
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/order-detail.jpg"></p>
+Product list
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/product-list.jpg"></p>
+Product detail
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/product-detail.jpg"></p>
+Auth
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/auth.jpg"></p>
+Backup
+<p align="center"><img src="https://s-cart.org/images/screen/v3x/backup.jpg"></p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## About S-cart
+Free Open source E-commerce use Laravel framework for Business
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Technology
+- Core <a href="https://laravel.com">Laravel Framework</a>
 
-## Learning Laravel
+## List Functions of S-cart
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+======= FRONT-END =======
+- Multi-language
+- Currencies
+- Customer sign up
+- Purchase history
+- Process cart
+- Manage product: price sale, cost price, promotion price, quantity, multi images, attributes ..
+- Categories product
+- Brand, vendor product
+- Payment method (default: COD, Paypal), shipping method
+- CMS: blog/news, banner, content,
+- Upload manager
+...
+======= ADMIN =======
+- Manage & permission users, groups
+- Customer management
+- Upload management
+- Order management: edit orders, update payment status, shipping status ...
+- Order history
+- Report: chart, statistics, export csv, pdf...
+- Configure email SMTP
+- System configuration: turn off website, hide / show products
+- Backup, restore data
+...
+======= EXTENSIONS =======
+- Shipping
+- Discount
+- Payment
+...support for integrated extension from 3rd party
+======= MODULES =======
+- Blog/News
+- Cms content: content categories, entries
+...support for integrated modules from 3rd party
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Requirements:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Version 3.x:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+> Core laravel framework 5.8. Requirements::
 
-## Contributing
+```
+- PHP >= 7.1.3
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
+- Ctype PHP Extension
+- JSON PHP Extension
+- BCMath PHP Extension
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Installation & configuration:
 
-## Security Vulnerabilities
+<b>How to map your domain to s-cart? <a href="https://s-cart.org/installation.html">CLICK HERE</a></b>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Step1: Install last version S-cart
+```
+composer create-project lanhktc/s-cart
+```
+Step2:
+- Chmod -R 777 storage
+- Chmod -R 777 vendor
+- Chmod -R 777 public/data
 
-## License
+Step3:
+```
+- Create a new database. Example database name is s-cart
+```
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Step4:
+
+=> From version 2.1.1, you can install s-cart by link: <code><b>your-domain.com/install.php</b></code>
+
+```
+Then, access your-domain.com/install.php to install S-cart.
+If installing with link "install.php" unsuccessful, you can install it manually below.
+```
+OR manual installation:
+```
+- Import file sql database/s-cart.sql to database.
+- Rename file .env.example to .env if file .env not exist.
+- Genarate API key if APP_KEY is null. Use command "php artisan key:generate"
+- Config value of file .env:
+    APP_URL=http://localhost
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=s-cart
+    DB_USERNAME=root
+    DB_PASSWORD=
+```
+
+Step5:
+
+NOTE: Please <b>remove</b> or <b>rename</b> file public/install.php so others cannot access it.
+
+Step6:
+- Access to url admin: your-domain/sc_admin.
+- User/pass <code><b>admin</b>/<b>admin</b></code>
+
+## Demo:
+
+- Font-end : http://demo.s-cart.org
+- Back-end: http://demo.s-cart.org/sc_admin   <code>User/pass: test/123456</code>
+
+### 
+
+VPS SSD $5/mo, gets $50 in credit over 30 days. [DigitalOcean](https://m.do.co/c/450877e92a78).

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\GeneralController;
+use App\Models\ShopCountry;
+use Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class LoginController extends GeneralController
 {
     /*
     |--------------------------------------------------------------------------
@@ -16,7 +19,7 @@ class LoginController extends Controller
     | redirecting them to your home screen. The controller uses a trait
     | to conveniently provide its functionality to your applications.
     |
-    */
+     */
 
     use AuthenticatesUsers;
 
@@ -25,8 +28,11 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
-
+    // protected $redirectTo = '/';
+    protected function redirectTo()
+    {
+        return '/';
+    }
     /**
      * Create a new controller instance.
      *
@@ -34,6 +40,37 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        parent::__construct();
         $this->middleware('guest')->except('logout');
     }
+
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+        ]);
+    }
+    public function showLoginForm()
+    {
+        if (Auth::user()) {
+            return redirect()->route('home');
+        }
+        return view('templates.' . sc_store('template') . '.shop_login',
+            array(
+                'title' => trans('front.login'),
+                'countries' => ShopCountry::getArray(),
+            )
+        );
+    }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return $this->loggedOut($request) ?: redirect()->route('login');
+    }
+
 }
