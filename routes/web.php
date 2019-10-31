@@ -25,7 +25,6 @@ Route::group(['namespace' => 'Auth', 'prefix' => 'member'], function ($router) {
     $router->get('/password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
     $router->get('/forgot.html', 'ForgotPasswordController@showLinkRequestForm')->name('forgot');
 });
-
 //End Auth
 
 //Customer profile
